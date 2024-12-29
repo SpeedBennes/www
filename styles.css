@@ -46,6 +46,37 @@ header .logo:hover {
     transform: scale(1.1); /* Agrandit l'image de 10% au survol */
 }
 
+/* Responsiveness */
+@media (max-width: 1200px) {
+    header {
+        padding: 5px 60px; /* Réduit l'espace horizontal */
+    }
+
+    header .logo {
+        max-width: 250px; /* Réduit la taille du logo sur les grands écrans */
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 5px 40px; /* Réduit encore plus l'espace pour les écrans moyens */
+    }
+
+    header .logo {
+        max-width: 200px; /* Réduit encore la taille du logo */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 5px 20px; /* Réduit l'espace pour les petits écrans */
+    }
+
+    header .logo {
+        max-width: 150px; /* Réduit encore plus la taille du logo */
+    }
+}
+
 
 /* Animation de la benne */
 .benne-animation {
@@ -100,6 +131,39 @@ header .logo:hover {
     }
 }
 
+/* Responsiveness */
+@media (max-width: 1200px) {
+    .benne .body {
+        width: 60px;  /* Réduit la largeur du corps de la benne */
+        height: 35px; /* Réduit la hauteur */
+    }
+    .benne .wheel {
+        width: 10px;  /* Réduit la taille des roues */
+        height: 10px; /* Réduit la hauteur des roues */
+    }
+}
+
+@media (max-width: 768px) {
+    .benne .body {
+        width: 50px;  /* Encore plus petit pour les écrans moyens */
+        height: 30px; /* Réduit la hauteur pour les écrans moyens */
+    }
+    .benne .wheel {
+        width: 8px;  /* Taille des roues encore réduite */
+        height: 8px; /* Hauteur des roues réduite */
+    }
+}
+
+@media (max-width: 480px) {
+    .benne .body {
+        width: 40px;  /* Taille minimale du corps de la benne pour les petits écrans */
+        height: 25px; /* Taille minimale pour garder les proportions */
+    }
+    .benne .wheel {
+        width: 6px;  /* Petites roues pour les petits écrans */
+        height: 6px; /* Réduit les roues pour les petits écrans */
+    }
+}
 
 /* Navigation */
 
@@ -128,9 +192,39 @@ nav a:hover {
     transform: scale(1.1);
 }
 
+/* Responsiveness */
+@media (max-width: 1200px) {
+    nav a {
+        margin: 0 10px; /* Réduit l'espacement entre les liens */
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Passage de la navigation horizontale à verticale */
+        align-items: center;    /* Centrer les éléments */
+    }
+
+    nav a {
+        margin: 10px 0; /* Espacement vertical entre les éléments */
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 10px 0; /* Réduit le padding pour les petits écrans */
+    }
+
+    nav a {
+        font-size: 14px; /* Réduit la taille des liens */
+        margin: 8px 0; /* Réduit l'espacement vertical */
+    }
+}
+
+
 /* Hero Section */
 .hero {
-    padding: 80px 20px 40px; /* Réduit le padding-bottom */
+    padding: 80px 20px 40px;
     background: url('https://source.unsplash.com/1920x1080/?recycling') no-repeat center/cover;
     color: black;
     clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
@@ -158,8 +252,8 @@ nav a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 200px; /* Espacement ajusté entre les boutons */
-    margin-top: 10px; /* Espacement avec le reste de la page */
+    gap: 200px;
+    margin-top: 10px;
     padding: 15px 0;
     margin-bottom: 50px;
     background: none;
@@ -174,26 +268,25 @@ nav a:hover {
     color: white;
     background: var(--primary-color);
     border: none;
-    border-radius: 50px; /* Bord arrondi pour une allure plus moderne */
+    border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre subtile pour du relief */
-    text-transform: uppercase; /* Texte en majuscules pour plus d'impact */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
 }
 
 /* Hover effect */
 .top-buttons button:hover {
-    background: #fab60b; /* Changement de couleur fluide */
-    transform: scale(1.1); /* Agrandissement doux au survol */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Ombre plus marquée */
+    background: #fab60b;
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Bouton spécifique pour "Appelez-nous" */
 .call-us {
-    background: #4CAF50; /* Vert agréable */
-    background: linear-gradient(135deg, #4CAF50, #3E8E41); /* Gradient subtil */
+    background: #4CAF50;
+    background: linear-gradient(135deg, #4CAF50, #3E8E41);
 }
-
 
 /* Hover personnalisé */
 .call-us:hover {
@@ -204,8 +297,77 @@ nav a:hover {
     background: linear-gradient(135deg, #0056b3, #007bff);
 }
 
+/* Responsiveness */
 
-/*glissière*/
+/* Sur les petits écrans */
+@media (max-width: 1200px) {
+    .top-buttons {
+        gap: 100px; /* Réduit l'espacement entre les boutons */
+    }
+
+    .hero h2 {
+        font-size: 2.5em; /* Réduit la taille du titre principal */
+    }
+
+    .hero h3 {
+        font-size: 1em; /* Réduit la taille du sous-titre */
+    }
+
+    .hero p {
+        font-size: 1.1em; /* Réduit la taille du texte */
+    }
+}
+
+/* Sur les écrans moyens (max-width: 768px) */
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 20px 30px; /* Ajuste le padding */
+    }
+
+    .top-buttons {
+        flex-direction: column; /* Passe les boutons en colonne */
+        gap: 20px; /* Réduit l'espacement entre les boutons */
+    }
+
+    .hero h2 {
+        font-size: 2em; /* Réduit la taille du titre principal */
+    }
+
+    .hero h3 {
+        font-size: 1em; /* Réduit la taille du sous-titre */
+    }
+
+    .hero p {
+        font-size: 1.1em; /* Réduit la taille du texte */
+    }
+}
+
+/* Sur les petits écrans (max-width: 480px) */
+@media (max-width: 480px) {
+    .hero {
+        padding: 40px 20px 20px; /* Réduit le padding pour les très petits écrans */
+    }
+
+    .hero h2 {
+        font-size: 1.8em; /* Taille du titre principal encore réduite */
+    }
+
+    .hero h3 {
+        font-size: 0.9em; /* Réduit la taille du sous-titre */
+    }
+
+    .hero p {
+        font-size: 1em; /* Réduit la taille du texte */
+    }
+
+    .top-buttons button {
+        padding: 12px 25px; /* Réduit la taille des boutons */
+        font-size: 1em; /* Réduit la taille de la police des boutons */
+    }
+}
+
+
+/* Glissière */
 
 /* Amélioration de l'effet de surbrillance */
 .slider span.highlight {
@@ -255,6 +417,45 @@ nav a:hover {
     100% {
         opacity: 1;
         transform: translateX(0); /* Arrive à sa position finale */
+    }
+}
+
+/* Responsiveness */
+
+/* Sur les petits écrans */
+@media (max-width: 1200px) {
+    #slider h1 {
+        font-size: 2rem; /* Réduit la taille du titre sur les écrans plus petits */
+    }
+
+    .slider span.highlight {
+        padding: 0 6px; /* Réduit un peu l'espace autour du texte pour les petits écrans */
+    }
+}
+
+/* Sur les écrans moyens (max-width: 768px) */
+@media (max-width: 768px) {
+    #slider h1 {
+        font-size: 1.8rem; /* Réduit la taille du titre encore plus pour les écrans moyens */
+        margin-top: 40px; /* Réduit la marge top */
+        margin-bottom: -40px; /* Réduit l'espace sous le titre */
+    }
+
+    .slider span.highlight {
+        padding: 0 4px; /* Réduit encore plus le padding des highlights */
+    }
+}
+
+/* Sur les très petits écrans (max-width: 480px) */
+@media (max-width: 480px) {
+    #slider h1 {
+        font-size: 1.6rem; /* Réduit la taille du titre pour les petits écrans */
+        margin-top: 20px; /* Réduit la marge top pour plus de place */
+        margin-bottom: -20px; /* Réduit l'espace sous le titre */
+    }
+
+    .slider span.highlight {
+        padding: 0 4px; /* Réduit encore le padding des highlights */
     }
 }
 
@@ -424,12 +625,12 @@ input:checked + label .description {
 /*glissère fin*/
 
 
-/*texte1*/
+/* Texte1 */
 /* Conteneur principal de la section */
 .texte1 {
     padding: 40px 20px;
     background-color: #494949; /* Couleur de fond douce */
-    margin-top: auto ;
+    margin-top: auto;
     margin-bottom: 60px;
 }
 
@@ -440,6 +641,7 @@ input:checked + label .description {
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
+    flex-wrap: wrap; /* Ajout pour rendre la section responsive */
 }
 
 /* Texte à gauche */
@@ -487,6 +689,59 @@ input:checked + label .description {
     background-color: #f1f104; /* couleur de surbrillance */
     color: #000000; /* texte blanc sur fond coloré */
     padding: 0 10px; /* Un peu de padding autour du texte */
+}
+
+/* Responsiveness */
+
+/* Sur les écrans larges (jusqu'à 1200px) */
+@media (max-width: 1200px) {
+    .texte1-content {
+        flex-direction: column; /* Empile le texte et l'image pour les écrans plus petits */
+        align-items: center;
+    }
+
+    .texte {
+        padding-right: 0; /* Supprime l'espace sur la droite du texte */
+        text-align: center; /* Centre le texte */
+    }
+
+    .image {
+        margin-top: 20px; /* Espace entre le texte et l'image */
+    }
+
+    .image img {
+        max-width: 80%; /* Réduit la taille de l'image pour les écrans plus petits */
+    }
+}
+
+/* Sur les écrans moyens (max-width: 768px) */
+@media (max-width: 768px) {
+    .texte h2 {
+        font-size: 1em; /* Réduit la taille du titre */
+    }
+
+    .texte p {
+        font-size: 0.9em; /* Augmente légèrement la taille du texte pour les écrans plus petits */
+    }
+
+    .image img {
+        max-width: 90%; /* Réduit encore la taille de l'image */
+    }
+}
+
+/* Sur les très petits écrans (max-width: 480px) */
+@media (max-width: 480px) {
+    .texte h2 {
+        font-size: 0.9em; /* Réduit la taille du titre pour les petits écrans */
+    }
+
+    .texte p {
+        font-size: 0.8em; /* Ajuste encore la taille du texte */
+    }
+
+    .image img {
+        max-width: 100%; /* L'image prend toute la largeur disponible */
+    }
 }
 
 /*les segments*/
@@ -758,7 +1013,6 @@ input:checked + label .description {
     transition: background-color 0.3s, box-shadow 0.3s ease-in-out;
 }
 
-
 .services span.highlight6 {
     background-color: #323332; /* Une couleur de surbrillance douce */
     color: #ffffff; /* Texte foncé pour le contraste */
@@ -766,6 +1020,35 @@ input:checked + label .description {
     border-radius: 5px; /* Coins légèrement arrondis */
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15); /* Ombre légère pour un effet de lumière subtil */
     transition: background-color 0.3s, box-shadow 0.3s ease-in-out;
+}
+
+/* Responsiveness */
+
+/* Sur les écrans larges (jusqu'à 1200px) */
+@media (max-width: 1200px) {
+    .service-item {
+        width: 45%; /* Réduit la largeur des éléments à 45% pour une meilleure présentation sur les écrans moyens */
+        margin: 10px;
+    }
+}
+
+/* Sur les écrans moyens (max-width: 768px) */
+@media (max-width: 768px) {
+    .service-item {
+        width: 100%; /* Les éléments prennent toute la largeur sur les petits écrans */
+        margin-bottom: 20px; /* Ajoute un espacement entre les éléments */
+    }
+
+    .services h2 {
+        font-size: 2em; /* Réduit la taille du titre pour les petits écrans */
+    }
+}
+
+/* Sur les très petits écrans (max-width: 480px) */
+@media (max-width: 480px) {
+    .services h2 {
+        font-size: 1.5em; /* Réduit la taille du titre pour les très petits écrans */
+    }
 }
 
 
