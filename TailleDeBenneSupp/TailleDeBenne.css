@@ -323,3 +323,146 @@ footer p {
     margin: 0; /* Supprime les marges */
     font-size: 14px; /* Taille du texte */
 }
+
+
+/* Responsive Design */
+
+/* Large écrans : Plus de 1200px */
+@media screen and (min-width: 1200px) {
+    .content .title, .content .name {
+        font-size: 80px;
+    }
+
+    .content .des {
+        font-size: 18px;
+    }
+
+    .arrows button {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Écrans moyens : entre 999px et 1199px */
+@media screen and (max-width: 1199px) and (min-width: 999px) {
+    header {
+        padding-left: 40px;
+    }
+
+    .list .item .content {
+        left: 40px;
+    }
+
+    .content .title, .content .name {
+        font-size: 60px;
+    }
+
+    .content .des {
+        font-size: 16px;
+    }
+}
+
+/* Petits écrans : entre 690px et 998px */
+@media screen and (max-width: 998px) and (min-width: 690px) {
+    header {
+        padding-left: 20px;
+    }
+
+    .content .title, .content .name {
+        font-size: 50px;
+    }
+
+    .content .des {
+        font-size: 14px;
+    }
+
+    .arrows {
+        right: 50%;
+    }
+
+    .arrows button {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* Très petits écrans : moins de 690px */
+@media screen and (max-width: 690px) {
+    header {
+        padding-left: 10px;
+    }
+
+    header nav a {
+        font-size: 12px;
+        margin-right: 2px;
+    }
+
+    .list .item .content {
+        top: 50%; /* Centrage vertical ajusté */
+        left: 10px; /* Alignement à gauche pour plus de lisibilité */
+        transform: translateY(-50%); /* Assure que le texte reste centré verticalement */
+    }
+
+    .content .title, .content .name {
+        font-size: 30px; /* Réduction de la taille de police */
+        line-height: 1.2; /* Espacement réduit entre les lignes */
+    }
+
+    .content .des {
+        font-size: 12px;
+        margin: 10px 0; /* Espacement supplémentaire en haut et en bas */
+    }
+
+    .content .btn button {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .arrows {
+        right: 40%;
+        width: 200px;
+    }
+
+    .arrows button {
+        width: 40px;
+        height: 40px;
+    }
+
+    footer {
+        padding: 15px 0;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+}
+
+/* Ultra petits écrans : moins de 480px */
+@media screen and (max-width: 480px) {
+    .list .item .content {
+        top: 55%; /* Légèrement plus bas pour plus de lisibilité */
+        left: 10px;
+        transform: translateY(-50%);
+    }
+
+    .content .title, .content .name {
+        font-size: 24px; /* Réduction encore plus importante de la taille de police */
+        line-height: 1.2;
+    }
+
+    .content .des {
+        font-size: 10px;
+        margin: 5px 0; /* Moins d'espace vertical pour les descriptions */
+    }
+
+    .content .btn button {
+        padding: 6px 8px;
+        font-size: 10px;
+    }
+
+    .arrows button {
+        width: 35px;
+        height: 35px;
+        font-size: 10px;
+    }
+}

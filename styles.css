@@ -168,8 +168,8 @@ header .logo:hover {
         height: 25px;
     }
     .benne .wheel {
-        width: 12px;
-        height: 12px;
+        width: 10px;
+        height: 10px;
     }
     .benne {
         animation: moveBenne 5s linear infinite; /* Animation plus rapide pour les petits écrans */
@@ -236,7 +236,7 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-    padding: 60px 20px 40px; /* Réduit un peu le padding en haut pour donner plus de place */
+    padding: 50px 20px 40px; /* Réduit un peu le padding en haut pour donner plus de place */
     background: url('https://source.unsplash.com/1920x1080/?recycling') no-repeat center/cover;
     color: black;
     clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
@@ -929,12 +929,14 @@ input:checked + label .description {
     margin: 0;
 }
 
-.zones-list li {
+.zones-list li a{
+    text-decoration: none; /* Pas de soulignement */
+    color: inherit; /* Hérite de la couleur de texte parent */
+    display: inline-block; /* S'assure que le lien prend la taille correcte */
     font-size: 0.9rem; /* Police réduite */
     margin: 6px 0; /* Espacement compact */
     color: #333;
     font-weight: 500;
-    display: flex;
     align-items: center;
 }
 
@@ -944,6 +946,12 @@ input:checked + label .description {
     font-size: 1rem; /* Taille réduite */
     color: var(--primary-color);
 }
+
+.zones-list a:hover {
+    background-color: #ebdc05; /* Fond au survol */
+    transform: scale(1.12); /* Effet de zoom léger */
+    cursor: pointer; /* Pointeur de souris pour l'interaction */
+  }
 
 /* Carte */
 .map img {
